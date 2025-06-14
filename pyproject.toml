@@ -1,0 +1,7 @@
+[project]
+name = "pokermelon-registry"
+version = "0.1.0"
+description = "PokerMelon poker tournament registry"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []

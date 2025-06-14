@@ -1,0 +1,17 @@
+title: str()
+year: int()
+events: list(include('event'))
+
+event:
+  name: str()
+  currency: str()
+  buyin_base: int(required=False)
+  buyin_extra: int(required=False)
+  guarantee: int(required=False)
+  schedules: list(include('schedule'))
+
+schedule:
+  name: str()
+  start_time: timestamp()
+  registration_close_time: timestamp()
+  level_time: int(required=False)
