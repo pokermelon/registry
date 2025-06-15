@@ -4,7 +4,7 @@ url: str() # e.g. "https://redspace.com.tw/"
 google_maps_url: str() # e.g. "https://maps.app.goo.gl/XNdjUYibVxhz5ceK6"
 address: str() # e.g. "123 Main St, Taipei, Taiwan"
 city: str() # e.g. "Taipei"
-state: str() # e.g. "Taiwan"
+state: str(required=False) # e.g. "California" or empty for countries without states
 country_code: str() # e.g. "TW"
 latitude: num() # e.g. 25.037518
 longitude: num() # e.g. 121.563667
