@@ -9,13 +9,14 @@ events: list(include('event'))
 event:
   number: int() # e.g. 1, 2, 3, etc.
   name: str() # e.g. "Main Event", "Hyper Turbo - High Roller"
+  game: enum('NLH', 'PLO', 'Razz', 'Stud', 'Short Deck')
   currency: str() # e.g. "USD", "EUR"
   buyin_base: num(required=False) #  in terms of `currency`
   buyin_extra: num(required=False) # in terms of `currency`
   guarantee: num(required=False) # in terms of `currency`
   schedules: list(include('schedule'))
   tags: list(enum(
-    'NLH', 'PLO', 'PLO5', 'Omaha Hi-Lo', 'Mixed Game', 'Razz', 'Stud', 'Short Deck',
+    'Main Event', 'High Roller', 'Satellite',
     'Bounty', 'Mystery Bounty', 'Turbo', 'Win the Button', 'Shootout', 'Freezeout',
     ))
 
