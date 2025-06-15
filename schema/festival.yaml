@@ -1,7 +1,7 @@
-title: str() # e.g. "APT"
+series: str() # e.g. "apt"
 name: str() # e.g. "APT Taipei 2025"
 year: int() # e.g. 2025
-location: str() # e.g. "Red Space, Taipei, Taiwan"
+location: str() # e.g. "tw-red-space"
 start_date: day() # e.g. "2025-04-25"
 end_date: day() # e.g. "2025-05-04"
 events: list(include('event'))
