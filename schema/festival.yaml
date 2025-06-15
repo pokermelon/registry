@@ -14,6 +14,10 @@ event:
   buyin_extra: num(required=False) # in terms of `currency`
   guarantee: num(required=False) # in terms of `currency`
   schedules: list(include('schedule'))
+  tags: list(enum(
+    'NLH', 'PLO', 'PLO5', 'Omaha Hi-Lo', 'Mixed Game', 'Razz', 'Stud', 'Short Deck',
+    'Bounty', 'Mystery Bounty', 'Turbo', 'Win the Button', 'Shootout', 'Freezeout',
+    ))
 
 schedule:
   name: str(required=False) # e.g. "Day 1A", "Day 2", or empty for single day events

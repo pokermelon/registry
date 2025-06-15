@@ -26,6 +26,7 @@ events:
       - name: "Day 2"
         start_time: 2025-07-24 12:00:00
         level_time: 30
+    tags: ['NLH']
   - number: 2
     name: "APPT National"
     currency: "PHP"
@@ -50,3 +51,4 @@ events:
       - name: "Final"
         start_time: 2025-07-27 13:00:00
         level_time: 60
+    tags: ['NLH']
