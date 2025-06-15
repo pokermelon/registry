@@ -6,19 +6,30 @@ start_date: day() # e.g. "2025-04-25"
 end_date: day() # e.g. "2025-05-04"
 events: list(include('event'))
 ---
+
 event:
   number: int() # e.g. 1, 2, 3, etc.
   name: str() # e.g. "Main Event", "Hyper Turbo - High Roller"
-  game: enum('NLH', 'PLO', 'Razz', 'Stud', 'Short Deck')
-  currency: str() # e.g. "USD", "EUR"
+  game: include('game')
+  currency: include('currency')
   buyin_base: num() #  in terms of `currency`
   buyin_extra: num(required=False) # in terms of `currency`
   guarantee: num(required=False) # in terms of `currency`
   schedules: list(include('schedule'))
-  tags: list(enum(
-    'Main Event', 'High Roller', 'Satellite',
-    'Bounty', 'Mystery Bounty', 'Turbo', 'Win the Button', 'Shootout', 'Freezeout',
-    ))
+  tags: list(include('tag'))
+
+game: enum(
+  'NLH', 'PLO', 'Razz', 'Stud', 'Short Deck'
+  )
+
+tag: enum(
+  'Main Event', 'High Roller', 'Satellite',
+  'Bounty', 'Mystery Bounty', 'Turbo', 'Win the Button', 'Shootout', 'Freezeout',
+  )
+
+currency: enum(
+  'USD', 'EUR', 'PHP'
+  )
 
 schedule:
   name: str(required=False) # e.g. "Day 1A", "Day 2", or empty for single day events
