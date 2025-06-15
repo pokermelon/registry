@@ -19,7 +19,7 @@ event:
   tags: list(include('tag'))
 
 game: enum(
-  'NLH', 'PLO', 'Razz', 'Stud', 'Short Deck'
+  'NLH', 'PLO', 'Razz', 'Stud', 'Short Deck',
   )
 
 tag: enum(
@@ -28,7 +28,7 @@ tag: enum(
   )
 
 currency: enum(
-  'USD', 'EUR', 'PHP'
+  'USD', 'EUR', 'PHP',
   )
 
 schedule:
