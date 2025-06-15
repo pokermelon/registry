@@ -1,0 +1,22 @@
+title: str() # e.g. "APT"
+name: str() # e.g. "APT Taipei 2025"
+year: int() # e.g. 2025
+location: str() # e.g. "Red Space, Taipei, Taiwan"
+start_date: day() # e.g. "2025-04-25"
+end_date: day() # e.g. "2025-05-04"
+events: list(include('event'))
+---
+event:
+  number: int() # e.g. 1, 2, 3, etc.
+  name: str() # e.g. "Main Event", "Hyper Turbo - High Roller"
+  currency: str() # e.g. "USD", "EUR"
+  buyin_base: num(required=False) #  in terms of `currency`
+  buyin_extra: num(required=False) # in terms of `currency`
+  guarantee: num(required=False) # in terms of `currency`
+  schedules: list(include('schedule'))
+
+schedule:
+  name: str(required=False) # e.g. "Day 1A", "Day 2", or empty for single day events
+  start_time: timestamp() # e.g. "2025-01-01 10:00:00"
+  registration_close_time: timestamp(required=False) # e.g. "2025-01-01 15:00:00"
+  level_time: int(required=False) # in minutes, e.g. 120

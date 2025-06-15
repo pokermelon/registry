@@ -1,0 +1,52 @@
+title: "APPT"
+name: "APPT Manila 2025"
+year: 2025
+location: "Okada Manila, Philippines"
+start_date: 2025-07-23
+end_date: 2025-08-04
+events:
+  - number: 1
+    name: "Okada Kickoff"
+    currency: "PHP"
+    buyin_base: 16500
+    guarantee: 3000000
+    schedules:
+      - name: "Flight A"
+        start_time: 2025-07-23 13:00:00
+        level_time: 25
+        registration_close_time: 2025-07-23 17:30:00
+      - name: "Flight B"
+        start_time: 2025-07-23 17:00:00
+        level_time: 25
+        registration_close_time: 2025-07-23 21:30:00
+      - name: "Flight C"
+        start_time: 2025-07-23 21:00:00
+        level_time: 15
+        registration_close_time: 2025-07-23 23:50:00
+      - name: "Day 2"
+        start_time: 2025-07-24 12:00:00
+        level_time: 30
+  - number: 2
+    name: "APPT National"
+    currency: "PHP"
+    buyin_base: 35000
+    guarantee: 10000000
+    schedules:
+      - name: "Flight A"
+        start_time: 2025-07-24 12:00:00
+        level_time: 30
+        registration_close_time: 2025-07-24 17:20:00
+      - name: "Flight B"
+        start_time: 2025-07-25 12:00:00
+        level_time: 30
+        registration_close_time: 2025-07-25 17:20:00
+      - name: "Flight C"
+        start_time: 2025-07-25 18:00:00
+        level_time: 20
+        registration_close_time: 2025-07-25 21:40:00
+      - name: "Day 2"
+        start_time: 2025-07-26 12:00:00
+        level_time: 40
+      - name: "Final"
+        start_time: 2025-07-27 13:00:00
+        level_time: 60
