@@ -11,7 +11,7 @@ event:
   name: str() # e.g. "Main Event", "Hyper Turbo - High Roller"
   game: enum('NLH', 'PLO', 'Razz', 'Stud', 'Short Deck')
   currency: str() # e.g. "USD", "EUR"
-  buyin_base: num(required=False) #  in terms of `currency`
+  buyin_base: num() #  in terms of `currency`
   buyin_extra: num(required=False) # in terms of `currency`
   guarantee: num(required=False) # in terms of `currency`
   schedules: list(include('schedule'))
