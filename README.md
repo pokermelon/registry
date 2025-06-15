@@ -4,9 +4,9 @@ This repository stores structured data for poker tournaments, along with YAML sc
 
 ## Repository layout
 
-```
+```txt
 registry/
-├── data/       # Example data files
+├── data/       # Data files
 │   ├── festivals/
 │   ├── series/
 │   └── venues/
@@ -16,11 +16,13 @@ registry/
 ```
 
 ### Data directories
+
 - **data/festivals** – Festival schedules including events and structures
 - **data/series** – Information about tournament series (name, official URL, etc.)
 - **data/venues** – Details about venues such as address and location coordinates
 
 ### Schemas
+
 The `schema/` directory defines Yamale schemas for each type of data. These schemas are used to validate the YAML files in `data/`.
 
 ## Validating the data
@@ -28,8 +30,8 @@ The `schema/` directory defines Yamale schemas for each type of data. These sche
 Install the dependency (`yamale`) using `uv` and run the validation script:
 
 ```bash
-uv pip install yamale
-python3 main.py
+uv sync
+uv run main.py
 ```
 
 The script will load the example data files and ensure they conform to the schemas. Any validation error will result in an exception being raised.
@@ -37,4 +39,3 @@ The script will load the example data files and ensure they conform to the schem
 ## Python version
 
 The project targets Python 3.13 or newer as specified in `pyproject.toml`.
-
